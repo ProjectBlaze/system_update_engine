@@ -3,6 +3,7 @@ service update_engine /system/bin/update_engine --logtostderr --logtofile --fore
     user root
     group root system wakelock inet cache media_rw
     task_profiles OtaProfiles
+    writepid /dev/blkio/background/tasks
     disabled
 
 on property:ro.boot.slot_suffix=*
